@@ -1,0 +1,74 @@
+h1 {
+
+text-align: center;
+color: white;
+    
+}
+
+div.baddie {
+
+ background-color:darkblue;
+    color:white;
+    margin:20px;
+    padding:20px;
+    border-color: white
+        
+}
+
+body {
+
+background-color: red;
+    
+
+}
+
+.baddie {
+    float: left;
+  
+    border: 1px solid white;
+} 
+
+.baddie {
+
+    color:white;
+    margin:2px;
+    padding:2px;
+
+}
+#totalbill{
+        background-color:darkblue;
+    display: inline-block;
+color: white;
+width:100px;
+    
+}
+#baddiestotal {
+    
+    background-color:darkblue;
+    color:white;
+    margin:20px;
+    padding:20px;
+    text-align: center;
+    border-color: white;
+}
+
+#wrapper {
+  position: relative;
+    margin-top: -150px;  /* negative value of footer height */
+    height: 150px;
+    clear: both;
+    
+    background-color:darkblue;
+    color:white;
+    margin:20px;
+    padding:20px;
+    border-color: white
+    right: 100px; 
+}
+
+#lefttop{
+position: relative;
+   bottom: -16px;
+   right: -750px;
+
+}
