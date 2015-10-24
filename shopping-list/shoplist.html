@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopList">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop List</title>
+    <link rel="stylesheet" href="shoplist.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+    <div ng-controller='MainController'>
+        <div class="container ">
+        <h1>Mom's Shopping List</h1>
+        
+        <input type='text' ng-model='item'>
+        <button ng-click='add(item)'>Add item</button> 
+        <ul>
+        <li ng-repeat='thing in list'><button ng-click='delete(thing)'>x</button> {{ thing }} </li>
+            </ul>
+    </div>
+</div>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js">
+    </script> 
+    <script src="shoplist.js"></script>
+</body>
+</html>

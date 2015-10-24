@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Thing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="ugly.css">
+</head>
+
+<body ng-app='ugly'>
+    <div ng-controller="MainController">
+        <div class="container border">
+            <div class="row rec">
+               <div class='text-center'>
+                   <h1>Ugly Thing</h1>
+               </div>
+                <div class='col-md-4 form-group'>
+                    <input type="text" class='form-control' ng-model='title' placeholder="Title">
+                </div>
+                <div class='col-md-4 form-group'>
+                    <input type="text" class='form-control' ng-model='paragraph' placeholder="Description">
+                </div>
+                <div class='col-md-4 form-group'>
+                    <input type="text" class='form-control' ng-model='img' placeholder="URL Image">
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-primary center-block" ng-click='boton(title,paragraph,img)'>Submit</button>
+                </div>
+            </div>
+
+        </div>
+        <div ng-repeat='thing in things'>
+            <div class='container border'>
+                <div class="row">
+
+                    <h1 class='text-center'>{{ thing.title }}</h1>
+                    <p class='text-center'>{{ thing.paragraph }}</p>
+                    <img ng-src="{{ thing.img }}" alt="" class='center-block'>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js">
+    </script>
+    <script src="ugly.js"></script>
+</body>
+
+</html>

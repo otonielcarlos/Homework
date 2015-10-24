@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='badge'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Badge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!--        <link rel="stylesheet" href="badge.css">-->
+</head>
+
+<body>
+    <div ng-controller='MainController'>
+        <div class="container border">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class='title text-center'>Name Badge</h1>
+                </div>
+
+                <div class='col-md-6 form-group'>
+                    <input placeholder="First Name" class='length form-control' ng-model='name'>
+                </div>
+
+                <div class='col-md-6 form-group'>
+                    <input class='length form-control' ng-model='last' placeholder='Last Name'>
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <input class='length form-control' ng-model='email' placeholder="Email">
+                </div>
+
+                <div class='col-md-6 form-group'>
+                    <input class='length form-control' ng-model='birth' placeholder="Place of Birth">
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <input class='length form-control' placeholder='Phone' ng-model='phone'>
+                </div>
+
+                <div class='col-md-6 form-group'>
+                    <input class='length form-control' placeholder='Favorite Food' ng-model='food'>
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <textarea rows="4" class="form-control" placeholder='Tell us about yourself!' ng-model='text'></textarea>
+                </div>
+
+                <div class="col-md-12">
+                    <button class="btn btn-primary center-block" ng-click='submit(name,last,email,phone,birth,food,text)'> Sumbit </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Termina la primera parte-->
+
+        <!-- Empieza la segunda parte-->
+
+        <div class="container border" ng-repeat='bad in badge'>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <h1 class="title text-center">Badge</h1>
+                </div>
+                <div class='col-md-6 form-group'>
+                    <p class='form-control'>Name:{{bad.name}} {{ bad.last }} </p>
+                </div>
+                <div class="col-md-6 form-group">
+                    <p class='form-control'>Phone:{{ bad.phone }}</p>
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <p class='form-control'>Place of Birth:{{ bad.birth }}</p>
+                </div>
+                <div class='col-md-6 form-group'>
+                    <p class='form-control'>Favorite Food{{ bad.food }}</p>
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <p class='form-control'>Email: {{ bad.email }}</p>
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <textarea readonly rows="4" class="form-control"> {{ bad.text }}</textarea>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Termina la segunda parte-->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js">
+    </script>
+    <script src="badge.js"></script>
+</body>
+
+</html>
