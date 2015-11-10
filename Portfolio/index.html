@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Otoniel Carlos || Portfolio</title>
+    <title>Otoniel Carlos | Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<!--    <link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <!--    <link rel="stylesheet" href="css/font-awesome.min.css">-->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
@@ -32,6 +32,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="navbar-brand" href="#/">HOME</a></li>
                         <li><a class="navbar-brand" href="#/about">ABOUT</a></li>
+                        <li><a class="navbar-brand" href="#/education">EDUCATION</a></li>
                         <li><a class="navbar-brand" href="#/skills">SKILLS</a></li>
                         <li><a class="navbar-brand" href="#/projects">PROJECTS</a></li>
                     </ul>
@@ -40,15 +41,12 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <hr>
-
-        <div class="container">
-            <div class="page {{pageClass}}" ng-view></div>
-        </div>
 
     </div>
-
-
+    <hr>
+    <div class="container">
+        <div class="page {{pageClass}}" ng-view></div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="//code.angularjs.org/1.4.5/angular-route.js"></script>

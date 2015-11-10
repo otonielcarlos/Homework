@@ -7,6 +7,9 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).when("/about", {
         templateUrl: "sections/about.html",
         controller: "AboutController"
+    }).when("/education", {
+        templateUrl: "sections/education.html",
+        controller: "EducationController"
     }).when("/projects", {
         templateUrl: "sections/projects.html",
         controller: "ProjectsController"
@@ -23,6 +26,11 @@ app.controller("HomeController", ["$scope", function ($scope) {
 
 app.controller("AboutController", ["$scope", function ($scope) {
     $scope.pageClass = "about"
+
+}]);
+
+app.controller("EducationController", ["$scope", function ($scope) {
+    $scope.pageClass = "education"
 
 }]);
 

@@ -7,6 +7,7 @@
 
 .navbar-default .navbar-nav>li>a:visited {
     color: white;
+    float: none;
 }
 
 .fa {
@@ -47,8 +48,8 @@ body {
     width: 100%;
     height: 100%;
     background: white;
-    opacity: 0.8;
-    position: static;
+    opacity: 0.9;
+    position: inherit;
     color: black;
 }
 
@@ -71,6 +72,11 @@ box-shadow: 0 0 1px rgba(0,
 -moz-osx-font-smoothing: grayscale;
 position: relative;
 overflow: hidden;
+.me {
+    max-width: 50%;
+    max-height: 50%;
+}
+
 
 /*
 .navbar-default .navbar-nav>li>a:hover,
@@ -110,7 +116,36 @@ a:active,
 
 .image:hover {
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 0.2s;
+}
+
+.imagecc {
+    max-width: 60%;
+    max-height: 60%;
+    box-shadow: 5px 5px 10px #aaa;
+    padding: 0px;
+    vertical-align: middle;
+    opacity: 0.9;
+}
+
+.imageitesm {
+    max-width: 60%;
+    max-height: 60%;
+    box-shadow: 5px 5px 10px #aaa;
+    padding: 0px;
+    vertical-align: middle;
+    opacity: 0.9;
+    margin: auto;
+}
+
+.imagecc:hover {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.imageitesm:hover {
+    opacity: 1;
+    transition: opacity 0.2s;
 }
 
 h2 {
@@ -147,11 +182,11 @@ hr {
     /* backface-visibility: hidden; */
     position: relative;
     overflow: hidden;
+    align-content: center;
 }
 
 
 /*nganimate begins*/
-
 
 @keyframes scaleUp {
     from {
@@ -159,6 +194,15 @@ hr {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
@@ -170,3 +214,14 @@ hr {
     animation: scaleUp 1s;
 }
 
+.about.ng-enter {
+    animation: scaleUp 1s;
+}
+
+.projects.ng-enter {
+    animation: scaleUp 1s;
+}
+
+.education.ng-enter {
+    animation: scaleUp 1s;
+}
