@@ -1,4 +1,4 @@
-var app = angular.module("MyApp", ["ngRoute"]);
+var app = angular.module("MyApp", ["ngRoute", "ngAnimate"]);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when("/", {
@@ -11,24 +11,27 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: "sections/projects.html",
         controller: "ProjectsController"
     }).when("/skills", {
-        templateUrl:"sections/skills.html",
+        templateUrl: "sections/skills.html",
         controller: "SkillsController"
-    
+
     })
 }]);
 
 app.controller("HomeController", ["$scope", function ($scope) {
-    
+    $scope.pageClass = "home"
 }])
 
 app.controller("AboutController", ["$scope", function ($scope) {
+    $scope.pageClass = "about"
 
 }]);
 
 app.controller("ProjectsController", ["$scope", function ($scope) {
+    $scope.pageClass = "projects"
 
 }]);
 
 app.controller("SkillsController", ["$scope", function ($scope) {
+    $scope.pageClass = "skills"
 
 }]);

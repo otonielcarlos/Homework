@@ -15,7 +15,7 @@
 
 body {
     color: white;
-    background-image: url("http://www.easyoffer.net/p/nature-wallpaper-6721.jpg");
+    background-image: url("images/nature-wallpaper-6721.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -56,6 +56,21 @@ body {
     padding-top: 100px;
 }
 
+display: inline-block;
+vertical-align: middle;
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+box-shadow: 0 0 1px rgba(0,
+0,
+0,
+0);
+-webkit-backface-visibility: hidden;
+
+/* backface-visibility: hidden; */
+
+-moz-osx-font-smoothing: grayscale;
+position: relative;
+overflow: hidden;
 
 /*
 .navbar-default .navbar-nav>li>a:hover,
@@ -90,6 +105,12 @@ a:active,
     box-shadow: 5px 5px 10px #aaa;
     padding: 15px;
     vertical-align: middle;
+    opacity: 0.9;
+}
+
+.image:hover {
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 h2 {
@@ -117,3 +138,35 @@ hr {
 #grid .mix .overlay {
     background: #3498db;
 }
+
+.navbar-brand>a:hover {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    /* backface-visibility: hidden; */
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*nganimate begins*/
+
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home.ng-enter {
+    animation: scaleUp 1s;
+}
+
+.skills.ng-enter {
+    animation: scaleUp 1s;
+}
+
