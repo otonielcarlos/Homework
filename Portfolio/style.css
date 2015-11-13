@@ -1,39 +1,14 @@
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-    color: white;
-    margin-bottom: 0;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: white;
-}
-
-.navbar-default .navbar-nav>.active>li>a:focus {
-    filter: blur(1px);
-    color: white;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
-    -webkit-filter: blur(1px);
-    -moz-filter: blur(1px);
-    -o-filter: blur(1px);
-    -ms-filter: blur(1px);
-    filter: blur(1px);
-    color: white;
-}
-
 .fa {
     color: white;
 }
 
 body {
     color: white;
-    background-image: url("images/nature-wallpaper-6721.jpg");
+    font-family: 'Oxygen', sans-serif;
+    background-image: url("images/nature-wallpaper-6721.jpg.sb-d71ed6d6-cAwO75");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Oxygen', sans-serif;
 }
 
 .social {
@@ -70,38 +45,10 @@ body {
     padding-top: 100px;
 }
 
-display: inline-block;
-vertical-align: middle;
--webkit-transform: translateZ(0);
-transform: translateZ(0);
-box-shadow: 0 0 1px rgba(0,
-0,
-0,
-0);
--webkit-backface-visibility: hidden;
-
-/* backface-visibility: hidden; */
-
--moz-osx-font-smoothing: grayscale;
-position: relative;
-overflow: hidden;
 .me {
     max-width: 50%;
     max-height: 50%;
 }
-
-
-/*
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus,
-a:hover,
-a:active,
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
-    color: #3498db;
-}
-*/
 
 .info {
     padding-top: 30px;
@@ -133,8 +80,8 @@ a:active,
 }
 
 .imagecc {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 65%;
+    max-height: 65%;
     box-shadow: 5px 5px 10px #aaa;
     padding: 0px;
     vertical-align: middle;
@@ -142,14 +89,13 @@ a:active,
 }
 
 .imageitesm {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 70%;
+    max-height: 70%;
     box-shadow: 5px 5px 10px #aaa;
-      padding: 0px;
-    vertical-align:middle;
+    padding: 0px;
+    vertical-align: middle;
     opacity: 0.9;
-    margin: auto;
-    
+    margin: 0px;;
 }
 
 .imagecc:hover {
@@ -176,6 +122,7 @@ h3 {
 p {
     line-height: 1.7;
     font-size: 18px;
+    text-align: justify;
 }
 
 hr {
@@ -184,6 +131,37 @@ hr {
     margin-top: 0;
     margin-bottom: 20px;
 }
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+/*---------------navbar---------------*/
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>.active>li>a:focus {
+    filter: blur(1px);
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+    color: white;
+}
+
+
+/*------------navbar animation------------*/
 
 .spacer,
 .nav-pills>li.active>a,
@@ -198,6 +176,16 @@ hr {
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-backface-visibility: hidden;
+    /* backface-visibility: hidden; */
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+}
+
+.navbar-default .navbar-nav>li>a:active {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     /* backface-visibility: hidden; */
     position: relative;
     overflow: hidden;
@@ -223,6 +211,27 @@ hr {
     to {
         opacity: 0;
     }
+}
+
+@keyframes blur {
+    from {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+    to {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+}
+
+.background.ng-enter {
+    animation: blur;
 }
 
 .home.ng-enter {

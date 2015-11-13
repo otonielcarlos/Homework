@@ -11,8 +11,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: "sections/education.html",
         controller: "EducationController"
     }).when("/projects", {
-        templateUrl: "sections/projects.html",
-        controller: "ProjectsController"
+        templateUrl: "sections/portfolio.html",
+        controller: "PortfolioController"
     }).when("/skills", {
         templateUrl: "sections/skills.html",
         controller: "SkillsController"
@@ -34,8 +34,8 @@ app.controller("EducationController", ["$scope", function ($scope) {
 
 }]);
 
-app.controller("ProjectsController", ["$scope", function ($scope) {
-    $scope.pageClass = "projects"
+app.controller("PortfolioController", ["$scope", function ($scope) {
+    $scope.pageClass = "portfolio"
 
 }]);
 
