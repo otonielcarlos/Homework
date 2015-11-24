@@ -5,7 +5,7 @@
 body {
     color: white;
     font-family: 'Oxygen', sans-serif;
-    background-image: url("images/nature-wallpaper-6721.jpg.sb-d71ed6d6-cAwO75");
+    background-image: url(images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -24,12 +24,40 @@ body {
     /*    background-color: black;*/
 }
 
+.contact {
+vertical-align: middle;
+    padding: 50px;
+
+}
+
+#linkedin {
+    color: #0077B5;
+}
+
+#github {
+    color: black;
+}
+
 .fa-github:hover {
     color: black;
 }
 
 .fa-linkedin:hover {
     color: #0077B5;
+}
+
+.fa-envelope {
+    color: black
+}
+
+.fa-phone {
+    color: black
+}
+
+a:link,
+a:visited {
+    outline: 0;
+    color: black;
 }
 
 .view {
@@ -65,12 +93,21 @@ body {
     letter-spacing: 5px;
 }
 
+img {}
+
+.img-responsive {
+    height: auto;
+    max-width: 100%;
+    padding: 0px;
+}
+
 .image {
-    width: 70%;
-    height: 70%;
+    position: relative;
+    display: inline-block;
+    max-height: 170px;
+    margin-top: 20px;
     box-shadow: 5px 5px 10px #aaa;
-    padding: 15px;
-    vertical-align: middle;
+    /*    padding: 15px;*/
     opacity: 0.9;
 }
 
@@ -79,9 +116,41 @@ body {
     transition: opacity 0.2s;
 }
 
+.imageTwo {
+    position: relative;
+    display: inline-block;
+    max-height: 150px;
+    max-width: 90%;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px #aaa;
+    /*    padding: 15px;*/
+    opacity: 0.9;
+}
+
+.imageTwo:hover {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+#me {
+    position: relative;
+    display: inline-block;
+    max-height: 300px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px #aaa;
+    /*    padding: 15px;*/
+    opacity: 0.9;
+}
+
+#me:hover {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
 .imagecc {
-    max-width: 65%;
-    max-height: 65%;
+    position: relative;
+    /*    max-width: 100%;*/
+    max-height: 205px;
     box-shadow: 5px 5px 10px #aaa;
     padding: 0px;
     vertical-align: middle;
@@ -89,13 +158,14 @@ body {
 }
 
 .imageitesm {
-    max-width: 70%;
-    max-height: 70%;
+    position: relative;
+    /*    max-width: 70%;*/
+    max-height: 205px;
     box-shadow: 5px 5px 10px #aaa;
     padding: 0px;
     vertical-align: middle;
     opacity: 0.9;
-    margin: 0px;;
+    ;
 }
 
 .imagecc:hover {
@@ -117,6 +187,7 @@ h2 {
 h3 {
     color: black;
     text-align: center;
+    display: block;
 }
 
 p {
@@ -246,10 +317,14 @@ hr {
     animation: scaleUp 1s;
 }
 
-.projects.ng-enter {
+.portfolio.ng-enter {
     animation: scaleUp 1s;
 }
 
 .education.ng-enter {
+    animation: scaleUp 1s;
+}
+
+.contact.ng-enter {
     animation: scaleUp 1s;
 }

@@ -1,4 +1,5 @@
-var readline = require("readline-sync");    
+var readline = require("readline-sync");
+
 function isShip() {
     var randNumber = Math.floor(Math.random() * 5) + 1;
     if (randNumber === 1) {
@@ -13,6 +14,7 @@ var Location = function () {
         this.display = "~"
 }
 var grid = [];
+
 function createGrid() {
     var count = 0;
     for (var i = 0; i < 10; i++) {
@@ -40,6 +42,7 @@ function printGrid() {
     }
     console.log(displayGrid.join("\n"));
 }
+
 function updateGrid(row, column) {
     var currentLocation = grid[row][column];
     if (currentLocation.ship) {
@@ -69,6 +72,6 @@ while (shipCount > 0) {
     console.log("There are " + shipCount + " ships left");
 }
 
-if (shipCount === 0 ){
+if (shipCount === 0) {
     console.log("You won!")
 }

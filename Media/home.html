@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMedia">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Media</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="node_modules/bootstrap-horizon/bootstrap-horizon.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div ng-controller="HomeController">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1 class="netflix">NETFLIX</h1>
+                </div>
+                <div class="col-md-6 searchBox">
+                        <input class="searchTab" type="text" ng-model="titleSearch" placeholder="Search">
+                        <button class="searchTab glyphicon glyphicon-search btn btn-xs" ng-click=search()></button>
+                        <img src="images/user.png" alt="" class="userTwo">
+                   
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row row-horizon">
+            <div class="img col-md-12 ">
+                <span><h2>{{titleSearch}}</h2></span>
+                <ul>
+                    <div class="content">
+                        <li ng-if="movie.Poster !== 'N/A'" ng-repeat="movie in movies" class="hover">
+                            <img ng-if="movie.Poster !== 'N/A'" ng-src="{{movie.Poster}}" class="img-responsive images">
+                            <span class="overlay">
+                                <span class="info">{{movie.Title}}</span>
+                                <br>
+                            <span class="info">{{movie.Genre}}</span>
+                            </span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row row-horizon">
+            <div class="img col-md-12 ">
+                <span><h3>Top Gun Releases</h3></span>
+                <ul>
+                    <div class="content">
+                        <li ng-if="gun.Poster !=='N/A'" ng-repeat="gun in top" class="hover">
+                            <img ng-if="gun.Poster !=='N/A'" ng-src="{{gun.Poster}}" class="img-responsive images">
+                            <span class="overlay">
+                                <span class="info">{{gun.Title}}</span>
+                                <br>
+                            <span class="info">{{gun.Genre}}</span>
+                            </span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="row row-horizon">
+
+            <div class="img col-md-12 ">
+                <h3>Recommended for you</h3>
+                <ul>
+                    <div class="content">
+                        <li ng-if="furious.Poster !=='N/A'" ng-repeat="furious in fast" class="hover">
+                            <img ng-if="furious.Poster !=='N/A'" ng-src="{{furious.Poster}}" class="img-responsive images">
+                            <span class="overlay">
+                                <span class="info">{{furious.Title}}</span>
+                                <br>        
+                            <span class="info">{{furious.Genre}}</span>
+                            </span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <!--    <script src="//code.angularjs.org/1.4.7/angular-animate.js"></script>-->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

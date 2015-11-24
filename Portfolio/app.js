@@ -16,7 +16,9 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).when("/skills", {
         templateUrl: "sections/skills.html",
         controller: "SkillsController"
-
+    }).when("/contact",{
+        templateUrl:"sections/contact.html",
+        controller:"ContactController"
     })
 }]);
 
@@ -41,5 +43,10 @@ app.controller("PortfolioController", ["$scope", function ($scope) {
 
 app.controller("SkillsController", ["$scope", function ($scope) {
     $scope.pageClass = "skills"
+
+}]);
+
+app.controller("ContactController", ["$scope", function ($scope) {
+    $scope.pageClass = "contact"
 
 }]);
